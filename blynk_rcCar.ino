@@ -1,6 +1,6 @@
 #define BLYNK_TEMPLATE_ID "TMPL6WKxPh01q"
-#define BLYNK_TEMPLATE_NAME "VC car"
-#define BLYNK_AUTH_TOKEN "0wJ8AI_vr2tkhoACE4am0wB3Miwfce5P"
+#define BLYNK_TEMPLATE_NAME "VC car"          // You will get the above two lines from the Blynk console as well
+#define BLYNK_AUTH_TOKEN ""     // Your authtoken in the string
 
 #define BLYNK_PRINT Serial
 
@@ -189,50 +189,7 @@ BLYNK_WRITE(V6)
 
 }
 
-// PRAY
-BLYNK_WRITE(V5)                 
-{
-  // Set incoming value from pin V2 to a variable
-  int temp = param.asInt();
-  if (temp == 1) {
-    Blynk.virtualWrite(V0, 0);
-    Blynk.virtualWrite(V1, 0);  // OMG ULTRAKILL REFERENCE??/?//?
-    Blynk.virtualWrite(V2, 0);  // OMG ULTRAKILL REFERENCE??/?//?
-    Blynk.virtualWrite(V3, 0);
-    
-    allStop();                  // Reset motor from any transient state
 
-    digitalWrite(IN1, LOW);    // Motor A off
-    digitalWrite(IN2, LOW);
-
-    digitalWrite(IN3, LOW);    // Motor B anti-clockwise
-    digitalWrite(IN4, HIGH);
-
-    timer.setTimeout(500L, allStop);
-
-    digitalWrite(IN3, HIGH);    // Motor B clockwise
-    digitalWrite(IN4, LOW);
-
-    timer.setTimeout(500L, allStop);
-
-    digitalWrite(IN1, LOW);    // Motor A anti-clockwise
-    digitalWrite(IN2, HIGH);
-
-    digitalWrite(IN3, LOW);    // Motor B off
-    digitalWrite(IN4, LOW);
-
-    timer.setTimeout(500, allStop);
-
-    digitalWrite(IN1, HIGH);    // Motor A clockwise
-    digitalWrite(IN2, LOW);
-
-    digitalWrite(IN3, LOW);    // Motor B off
-    digitalWrite(IN4, LOW);
-
-    timer.setTimeout(500, allStop);
-
-  }
-}
 
 void resetLED() {
 // Wake up MAX7219
@@ -306,8 +263,8 @@ void alternateFunctions() {
     smile();
   toggleFlag = !toggleFlag;
 }
-char ssid[] = "Afnan";
-char pass[] = "Password112233";
+char ssid[] = "you looked here";
+char pass[] = "";    // Change to current wifi credentials
 
 void setup() {
   Serial.begin(115200);
