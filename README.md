@@ -55,25 +55,7 @@ The assembly steps can be summarized as below:
     - Setup the Blynk device board and virtual pins according to the instructions in the ESP8266 code. 
     - Open and run Python webhook script provided, use voice commands into microphone to move the robot.
 
-[h!]
-
-    ![Image](images/front.jpg)
-
-[h!]
-
-    ![Image](images/iso.jpg)
-
-[h!]
-
-    ![Image](images/bottom.jpg)
-
-[h!]
-
-    ![Image](images/veroboard_solder.jpg)
-
-[t]
-
-    ![Image](images/Artboard 1.pdf) % Adjust filename and width as needed
+*Images included in the report, I think*
 
 # Circuit Diagram and Wiring
 According to the circuit diagram, our power supply was $418650$ rechargeable batteries. Each battery supplies $ 3.7$ V. Therefore, the total voltage received can range from $12-16$ V.
